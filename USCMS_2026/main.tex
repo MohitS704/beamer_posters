@@ -60,13 +60,16 @@
 \usepackage{tikz}
 \usepackage{booktabs} % Top and bottom rules for tables
 \usepackage{svg}
+% \usepackage{kpfonts}
+\usepackage{pxfonts}
+\usepackage[none]{hyphenat}
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION 
 %----------------------------------------------------------------------------------------
 
-\title{Off-shell Higgs boson Production Measurements} % Poster title
+\title{4-Lepton Off-shell Higgs boson Production Measurements} % Poster title
 
-\author{Mohit Srivastav} % Author(s)
+\author{Mohit Srivastav, HIG-25-003 Authors} % Author(s)
 
 \institute{Johns Hopkins University, CMS Joint 4-Lepton Study Team (CJLST)} % Institution(s)
 
@@ -80,16 +83,18 @@
   \end{tikzpicture}
   \begin{tikzpicture}[remember picture, overlay]
 %      %\node [anchor=north east, inner sep=3cm]  at (current page.north east)
-     \node [shift={(+6.5 cm, -9cm)}] at (current page.north west)
-     {\includegraphics[height=10cm]{images/JHU_seal.pdf}};
+     \node [shift={(+6.5 cm, -8.5cm)}] at (current page.north west)
+     {\includegraphics[height=12cm]{images/JHU_seal.pdf}};
   \end{tikzpicture}
 }
 % %end
 
 \begin{document}
 
-\addtobeamertemplate{block end}{}{\vspace*{2ex}} % White space under blocks
-\addtobeamertemplate{block alerted end}{}{\vspace*{2ex}} % White space under highlighted (alert) blocks
+\addtobeamertemplate{block end}{}{\vspace*{-1ex}} % White space under blocks
+% \addtobeamertemplate{block begin}{}{\vspace*{0ex}} % White space under blocks
+\addtobeamertemplate{block alerted end}{}{\vspace*{0ex}} % White space under highlighted (alert) blocks
+% \addtobeamertemplate{block alerted begin}{}{\vspace*{0ex}} % White space under highlighted (alert) blocks
 
 \setlength{\belowcaptionskip}{2ex} % White space under figures
 \setlength\belowdisplayshortskip{2ex} % White space under equations
@@ -106,44 +111,38 @@
 %	OBJECTIVES
 %----------------------------------------------------------------------------------------
 
-\begin{alertblock}{Objectives}
-
-Multiple measurements of off-shell Higgs boson production are presented:
-\begin{enumerate}
-\item The first test of Higgs substructure on CMS
-\item The first measurement of $\kappa_\lambda$ in the off-shell region
-\item The most precise indirect measurement of light-Yukawa couplings to date
-\item Measurements of BSM phenomena in the EFT limit in gluon-fusion production
-\item Constraints on the width with both heavy and light terms floated
-\item A combination of all the Run-2 off-shell width measurements to date
-\end{enumerate}
-
-
-\end{alertblock}
+\begin{block}{The off-shell Higgs boson}
+The off-shell region of the Higgs boson is enhanced in VV decays above $2m_\text{V}$,
+and is characterized by a strong interference component.
+The hallmark of the off-shell region is the independence from the the width,
+% as $\sim 4$ MeV $<<$ $2m_\text{V}$.
+{\begin{align}
+  \frac{\sigma(\text{i} \to \text{H} \to \text{f})}{ds} \propto \frac{1}{(s-M_\text{H}^2)^2 + M_\text{H}^2\Gamma_\text{H}^2}\\
+  \left(\sqrt{s} - M_\text{H}\right) >> \Gamma_H \text{ when $\sqrt{s} \geq 2m_\text{V}$} \nonumber
+\end{align}}
+\end{block}
+% \begin{figure}[!htb]
+% \includegraphics[width=\linewidth]{images/Struct_BSI.pdf}
+% % \caption{The EW evolution of the overall $4\ell$ distribution with varying Higgs signal strengths}
+% \label{fig:structure}
+% \end{figure}
 
 %----------------------------------------------------------------------------------------
 %	INTRODUCTION
 %----------------------------------------------------------------------------------------
 
-\begin{block}{The Off-shell Higgs boson}
+\begin{block}{Observables}
+Matrix-element discriminants, together with $m_{4\ell}$,
+were used as observables.
+\begin{center}  
+  \includegraphics[trim={0 0 25cm 0},clip,  width=0.89\linewidth]{images/ratio_0.pdf}\\
+  \includegraphics[trim={25.1cm 0 0 0},clip,width=0.89\linewidth]{images/ratio_0.pdf}
+  % \includegraphics[width=\linewidth]{images/ratio_0.pdf}
+\end{center}
 
-The off-shell region of the Higgs boson is present in VV decays above $2m_V$,
-and is characterized by a strong interference component with background.
-The hallmark of the off-shell region is the independence from the the width,
-as ~4 MeV $<<$ $2m_V$.
-\begin{equation}
-  \frac{\sigma(i \to H \to f)}{ds} \propto \frac{1}{(s-M_H^2)^2 + M_H^2\Gamma_H^2}
-  \label{eq:width}
-\end{equation}
 \end{block}
 
 %------------------------------------------------
-
-% \begin{figure}
-\includegraphics[width=\linewidth]{images/Struct_BSI.pdf}
-% \caption{The EW evolution of the overall $4\ell$ distribution with varying Higgs signal strengths}
-\label{fig:structure}
-% \end{figure}
 
 %----------------------------------------------------------------------------------------
 
@@ -160,30 +159,21 @@ as ~4 MeV $<<$ $2m_V$.
 %----------------------------------------------------------------------------------------
 %	MATERIALS
 %----------------------------------------------------------------------------------------
-
-\begin{block}{Observables}
-Observables crafted using MELA and MiLoMerge.
-\begin{center}  
-  \includegraphics[trim={0 0 25cm 0},clip,  width=0.55\linewidth]{images/ratio_0.pdf}\\
-  \includegraphics[trim={25.1cm 0 0 0},clip,width=0.55\linewidth]{images/ratio_0.pdf}
-\end{center}
-
-\end{block}
-
 \begin{block}{Higgs Substructure}
-
+We probe a nucleon form factor through the threshold energy $\Lambda_\text{H}$
+that tests Higgs boson substructure.
 % Figure~\ref{fig:structure} showcases the evolution given different values of $\Lambda_\text{H}$
 % for the form factor described in Eq.~\ref{eq:formFactor}, where $\Lambda_\text{H}$ is the
 % energy scale of the form factor and $d$ the characteristic size, 
 % which can be with the scan shown in Fig.~\ref{fig:structureScan}.
-\begin{align}
+{\begin{align*}
   F(q^2) &= 
      \left[
      \frac{1}{1 + | q^2 | / \Lambda_\text{H}^2}
      \right]^2
      \label{eq:formFactor}, &
     d &= \frac{\hbar c}{\Lambda_\text{H}}
-\end{align}
+\end{align*}}
 % \begin{figure}[!ht]
 \includegraphics[width=1.05\linewidth]{images/Paper_Structure.pdf}
 % \caption{Scan for $\Lambda_\text{H}$}
@@ -204,6 +194,13 @@ Observables crafted using MELA and MiLoMerge.
 % \end{table}
 \end{block}
 
+\begin{block}{Higgs Self Coupling}
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.98\linewidth]{images/scan_klambda.pdf}
+\end{figure}
+\end{block}
+
 %----------------------------------------------------------------------------------------
 
 %----------------------------------------------------------------------------------------
@@ -221,77 +218,30 @@ Observables crafted using MELA and MiLoMerge.
 %----------------------------------------------------------------------------------------
 %	METHODS
 %----------------------------------------------------------------------------------------
-
 \begin{block}{Yukawa Couplings}
+Scans over $\kappa_\text{t,Q}, \widetilde{\kappa}_\text{t,Q}$ in the EFT limit for gluon-fusion production,
+where $\kappa_\text{Q} \propto C_\text{HG}$ and $\tilde{\kappa}_\text{Q} \propto \tilde{C}_\text{HG}$.
+CP-odd sensitivity comes from interference (or lack thereof) with SM background in off-shell.
 \begin{figure}[!htb]
   \centering
-  \includegraphics[width=\linewidth]{images/scan_klambda.pdf}
+  \includegraphics[width=\linewidth]{images/Kappa_QTilde.pdf}
+\end{figure}
+
+Scans over u,d,s, and c quarks build off of previous work and utilize off-shell to remove
+constraints on vector boson couplings.
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=1.01\linewidth]{images/Kappa_c.pdf}
 \end{figure}
 
 \end{block}
+
 
 %----------------------------------------------------------------------------------------
 
 \end{column} % End of column 2.2
 
 \end{columns} % End of the split of column 2 - any content after this will now take up 2 columns width
-
-%----------------------------------------------------------------------------------------
-%	IMPORTANT RESULT
-%----------------------------------------------------------------------------------------
-
-% \begin{alertblock}{Important Result}
-
-% Lorem ipsum dolor \textbf{sit amet}, consectetur adipiscing elit. Sed commodo molestie porta. Sed ultrices scelerisque sapien ac commodo. Donec ut volutpat elit.
-
-% \end{alertblock} 
-
-%----------------------------------------------------------------------------------------
-
-\begin{columns}[t,totalwidth=\twocolwid] % Split up the two columns wide column again
-
-% \begin{column}{\onecolwid} % The first column within column 2 (column 2.1)
-
-
-
-% \end{column} % End of column 2.1
-
-\begin{column}{\onecolwid} % The second column within column 2 (column 2.2)
-
-%----------------------------------------------------------------------------------------
-%	RESULTS
-%----------------------------------------------------------------------------------------
-
-\begin{block}{Results}
-
-\begin{figure}
-\includegraphics[width=0.8\linewidth]{placeholder.jpg}
-\caption{Figure caption}
-\end{figure}
-
-Nunc tempus venenatis facilisis. Curabitur suscipit consequat eros non porttitor. Sed a massa dolor, id ornare enim:
-
-\begin{table}
-\vspace{2ex}
-\begin{tabular}{l l l}
-\toprule
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-\midrule
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
-\bottomrule
-\end{tabular}
-\caption{Table caption}
-\end{table}
-
-\end{block}
-
-%----------------------------------------------------------------------------------------
-
-\end{column} % End of column 2.2
-
-\end{columns} % End of the split of column 2
 
 \end{column} % End of the second column
 
@@ -303,9 +253,12 @@ Treatment 3 & 0.0009271 & 0.296 \\
 %	CONCLUSION
 %----------------------------------------------------------------------------------------
 
-\begin{block}{Conclusion}
-
-Nunc tempus venenatis facilisis. \textbf{Curabitur suscipit} consequat eros non porttitor. Sed a massa dolor, id ornare enim. Fusce quis massa dictum tortor \textbf{tincidunt mattis}. Donec quam est, lobortis quis pretium at, laoreet scelerisque lacus. Nam quis odio enim, in molestie libero. Vivamus cursus mi at \textit{nulla elementum sollicitudin}.
+\begin{block}{Anomalous Higgs width}
+Anomalous terms are allowed to float simultaneously to measure their effects on $\Gamma_\text{H}$. 
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=\linewidth]{images/gammaH.pdf}
+\end{figure}
 
 \end{block}
 
@@ -313,63 +266,60 @@ Nunc tempus venenatis facilisis. \textbf{Curabitur suscipit} consequat eros non 
 %	ADDITIONAL INFORMATION
 %----------------------------------------------------------------------------------------
 
-\begin{block}{Additional Information}
-
-Maecenas ultricies feugiat velit non mattis. Fusce tempus arcu id ligula varius dictum. 
-\begin{itemize}
-\item Curabitur pellentesque dignissim
-\item Eu facilisis est tempus quis
-\item Duis porta consequat lorem
-\end{itemize}
-
+\begin{block}{Run-2 Off-shell SM Combination}
+A combination of vector-boson decay channels
+is performed for all the Run-2 off-shell analyses conducted
+to retrieve the most precise measurement of the SM width of the Higgs boson
+to date.
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=\linewidth]{images/gammaH_combo.pdf}
+\end{figure}
 \end{block}
 
 %----------------------------------------------------------------------------------------
 %	REFERENCES
 %----------------------------------------------------------------------------------------
 
-\begin{block}{References}
+% \begin{alertblock}{Conclusion}
+% The off-shell region is an exciting region to probe
+% with bountiful physics options!
+% \end{alertblock}
 
-\nocite{*} % Insert publications even if they are not cited in the poster
-\small{\bibliographystyle{unsrt}
-\bibliography{sample}\vspace{0.75in}}
+% %----------------------------------------------------------------------------------------
+% %	ACKNOWLEDGEMENTS
+% %----------------------------------------------------------------------------------------
 
-\end{block}
+% \setbeamercolor{block title}{fg=red,bg=white} % Change the block title color
 
-%----------------------------------------------------------------------------------------
-%	ACKNOWLEDGEMENTS
-%----------------------------------------------------------------------------------------
+% \begin{block}{Acknowledgements}
 
-\setbeamercolor{block title}{fg=red,bg=white} % Change the block title color
+% \small{\rmfamily{Nam mollis tristique neque eu luctus. Suspendisse rutrum congue nisi sed convallis. Aenean id neque dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.}} \\
 
-\begin{block}{Acknowledgements}
+% \end{block}
 
-\small{\rmfamily{Nam mollis tristique neque eu luctus. Suspendisse rutrum congue nisi sed convallis. Aenean id neque dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.}} \\
+% %----------------------------------------------------------------------------------------
+% %	CONTACT INFORMATION
+% %----------------------------------------------------------------------------------------
 
-\end{block}
+% \setbeamercolor{block alerted title}{fg=black,bg=norange} % Change the alert block title colors
+% \setbeamercolor{block alerted body}{fg=black,bg=white} % Change the alert block body colors
 
-%----------------------------------------------------------------------------------------
-%	CONTACT INFORMATION
-%----------------------------------------------------------------------------------------
+% \begin{alertblock}{Contact Information}
 
-\setbeamercolor{block alerted title}{fg=black,bg=norange} % Change the alert block title colors
-\setbeamercolor{block alerted body}{fg=black,bg=white} % Change the alert block body colors
+% \begin{itemize}
+% \item Web: \href{http://www.university.edu/smithlab}{http://www.university.edu/smithlab}
+% \item Email: \href{mailto:john@smith.com}{john@smith.com}
+% \item Phone: +1 (000) 111 1111
+% \end{itemize}
 
-\begin{alertblock}{Contact Information}
+% \end{alertblock}
 
-\begin{itemize}
-\item Web: \href{http://www.university.edu/smithlab}{http://www.university.edu/smithlab}
-\item Email: \href{mailto:john@smith.com}{john@smith.com}
-\item Phone: +1 (000) 111 1111
-\end{itemize}
-
-\end{alertblock}
-
-\begin{center}
-\begin{tabular}{ccc}
-\includegraphics[width=0.4\linewidth]{logo.png} & \hfill & \includegraphics[width=0.4\linewidth]{logo.png}
-\end{tabular}
-\end{center}
+% \begin{center}
+% \begin{tabular}{ccc}
+% \includegraphics[width=0.4\linewidth]{logo.png} & \hfill & \includegraphics[width=0.4\linewidth]{logo.png}
+% \end{tabular}
+% \end{center}
 
 %----------------------------------------------------------------------------------------
 
